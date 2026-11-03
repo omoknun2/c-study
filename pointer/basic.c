@@ -1,14 +1,15 @@
 #include <stdio.h>
 
-void swap(int *a, int *b) {
-    int temp = *a;
-    *a = *b;
-    *b = temp;
+void factorial(int);
+
+void main(){
+    factorial(10);
 }
 
-int main(void) {
-    int x = 1, y = 2;
-    swap(&x, &y);
-    printf("x = %d, y = %d\n", x, y);
-    return 0;
+void factorial(int n){
+    int s_um = 1;
+    for(int j = 0; j < n; j++){
+        s_um *= (j + 1);
+    }
+    printf("%d", s_um);
 }
